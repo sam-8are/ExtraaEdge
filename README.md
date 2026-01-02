@@ -106,9 +106,16 @@ It closely simulates an industry-level CRM application and prepares students to 
 
 02/01/2026 (Rashmi Patil): 
 
-Use Case Diagram :
+## Use Case Diagrams
 
-![alt text](ReadmEphoto/bappa.jpg)
+### Admin Use Case
+![Admin Use Case](ReadmEPhoto/AdminUseCase.jpg)
+
+### Telecaller Use Case
+![Telecaller Use Case](ReadmEPhoto/Telecaller.jpg)
+
+### Telecaller Extended Use Case
+![Telecaller Extended Use Case](ReadmEPhoto/TelecallerU.jpg)
 
 
 
