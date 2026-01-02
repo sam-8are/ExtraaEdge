@@ -112,10 +112,9 @@ It closely simulates an industry-level CRM application and prepares students to 
 ![Admin Use Case]![alt text](image.png)
 
 ### Telecaller Use Case
-![Telecaller Use Case](ReadmEPhoto/Telecaller.jpg)
-
+![Telecaller Use Case]![alt text](image-1.png)
 ### Telecaller Extended Use Case
-![Telecaller Extended Use Case](ReadmEPhoto/TelecallerU.jpg)
+![Telecaller Extended Use Case]![alt text](image-2.png)
 
 
 
