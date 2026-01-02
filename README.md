@@ -104,6 +104,13 @@ It closely simulates an industry-level CRM application and prepares students to 
 ---
 
 
+02/01/2026 (Rashmi Patil): 
+
+Use Case Diagram :
+
+![Uploading bappa.jpg…]()
+
+
 
 
 
