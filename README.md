@@ -109,12 +109,12 @@ It closely simulates an industry-level CRM application and prepares students to 
 ## Use Case Diagrams
 
 ### Admin Use Case
-![Admin Use Case]![alt text](image.png)
+![alt text](image.png)
 
 ### Telecaller Use Case
-![Telecaller Use Case]![alt text](image-1.png)
+![alt text](image-1.png)
 ### Telecaller Extended Use Case
-![Telecaller Extended Use Case]![alt text](image-2.png)
+![alt text](image-2.png)
 
 
 
