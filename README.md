@@ -118,5 +118,10 @@ It closely simulates an industry-level CRM application and prepares students to 
 
 
 
+03/01/2026 
+
+### Adimin Activity Final (Samruddhi Athare)
+![alt text](image-4.png)
+
 
 
