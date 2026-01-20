@@ -78,11 +78,12 @@ const LandingPage = () => {
       {/* ================= HERO ================= */}
       <section id="home" className="hero">
         <div className="hero-content">
-          <h2>
-            Streamline Your Lead Management with <span>ExtraaEdge</span>
-          </h2>
+          <h2 className="hero-title">
+  Streamline Your Lead Management with <span>ExtraaEdge</span>
+</h2>
+
           <p>
-            A <strong>MERN Stack CRM Solution</strong> for Educational Institutes
+            A <strong> CRM Solution</strong> for Educational Institutes
             & Call Centers
           </p>
 

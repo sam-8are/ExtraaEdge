@@ -83,6 +83,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
 import Login from "./Pages/Login";
 import RegisterPage from "./Pages/Registration";
+import Contact from "./Pages/Contact"; // ✅ ADD THIS
 
 // Dashboards
 import AdminDashboard from "./Pages/AdminDashboard";
@@ -97,6 +98,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/contact" element={<Contact />} /> {/* ✅ CONTACT ROUTE */}
 
         {/* ================= DASHBOARD ROUTES ================= */}
         <Route path="/admin" element={<AdminDashboard />} />
