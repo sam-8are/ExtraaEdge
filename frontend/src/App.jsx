@@ -80,10 +80,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Public Pages
-import LandingPage from "./Pages/LandingPage";
+import LandingPage from "./Pages/Homepage/LandingPage";
 import Login from "./Pages/Login";
 import RegisterPage from "./Pages/Registration";
-import Contact from "./Pages/Contact"; // ✅ ADD THIS
+import Contact from "./Pages/Homepage/Contact"; // ✅ ADD THIS
 
 // Dashboards
 import AdminDashboard from "./Pages/AdminDashboard";
