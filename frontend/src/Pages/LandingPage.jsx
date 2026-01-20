@@ -4,37 +4,47 @@ import "../styles/LandingPage.css";
 import logo from "../assets/logo.png";
 import tableImg from "../assets/table.png";
 
-
 const LandingPage = () => {
   const [activeNav, setActiveNav] = useState("Home");
   const navigate = useNavigate();
 
   const navItems = ["Home", "Features", "Roles", "Tech Stack", "Contact"];
 
-  // Scroll to section
+  // Handle nav click
   const handleNavClick = (item) => {
     setActiveNav(item);
+
+    // 👉 If Contact → go to contact page
+    if (item === "Contact") {
+      navigate("/contact");
+      return;
+    }
+
+    // 👉 Otherwise scroll
     const section = document.getElementById(item.toLowerCase());
-    if (section) section.scrollIntoView({ behavior: "smooth" });
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
-  // Highlight nav on scroll
+  // Highlight nav on scroll (excluding Contact)
   useEffect(() => {
     const handleScroll = () => {
-      let current = "home";
+      let current = "Home";
+
       navItems.forEach((item) => {
+        if (item === "Contact") return;
+
         const section = document.getElementById(item.toLowerCase());
         if (section) {
-          const sectionTop = section.offsetTop - 100;
+          const sectionTop = section.offsetTop - 120;
           if (window.scrollY >= sectionTop) {
-            current = item.toLowerCase();
+            current = item;
           }
         }
       });
 
-      setActiveNav(
-        navItems.find((item) => item.toLowerCase() === current) || "Home"
-      );
+      setActiveNav(current);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -66,6 +76,7 @@ const LandingPage = () => {
               {item}
             </button>
           ))}
+
           <button
             className="btn-get-started-nav"
             onClick={() => navigate("/login")}
@@ -79,12 +90,12 @@ const LandingPage = () => {
       <section id="home" className="hero">
         <div className="hero-content">
           <h2 className="hero-title">
-  Streamline Your Lead Management with <span>ExtraaEdge</span>
-</h2>
+            Streamline Your Lead Management with <span>ExtraaEdge</span>
+          </h2>
 
           <p>
-            A <strong> CRM Solution</strong> for Educational Institutes
-            & Call Centers
+            A <strong>CRM Solution</strong> for Educational Institutes & Call
+            Centers
           </p>
 
           <div className="hero-buttons">
@@ -94,6 +105,7 @@ const LandingPage = () => {
             >
               Learn More
             </button>
+
             <button
               className="btn-secondary"
               onClick={() => navigate("/login")}
@@ -103,11 +115,10 @@ const LandingPage = () => {
           </div>
         </div>
 
-        {/* ===== HERO IMAGE WITH REAL DASHBOARD IMAGE ===== */}
+        {/* ================= HERO IMAGE ================= */}
         <div className="hero-image">
           <div className="mock-dashboard">
             <div className="mock-sidebar"></div>
-
             <div className="mock-content">
               <img
                 src={tableImg}
