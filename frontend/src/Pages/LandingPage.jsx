@@ -1,6 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "../styles/LandingPage.css";
+import logo from "../assets/logo.png";
+import tableImg from "../assets/table.png";
+
 
 const LandingPage = () => {
   const [activeNav, setActiveNav] = useState("Home");
@@ -8,14 +11,14 @@ const LandingPage = () => {
 
   const navItems = ["Home", "Features", "Roles", "Tech Stack", "Contact"];
 
-  // Scroll to section when nav button clicked
+  // Scroll to section
   const handleNavClick = (item) => {
     setActiveNav(item);
     const section = document.getElementById(item.toLowerCase());
     if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Highlight nav item on scroll
+  // Highlight nav on scroll
   useEffect(() => {
     const handleScroll = () => {
       let current = "home";
@@ -43,7 +46,10 @@ const LandingPage = () => {
       {/* ================= NAVBAR ================= */}
       <header className="navbar">
         <div className="logo-section">
-          <div className="logo-box">E</div>
+          <div className="logo-box">
+            <img src={logo} alt="ExtraaEdge Logo" />
+          </div>
+
           <div className="logo-text">
             <h1>ExtraaEdge</h1>
             <p>Lead Management & Telecalling CRM System</p>
@@ -76,8 +82,8 @@ const LandingPage = () => {
             Streamline Your Lead Management with <span>ExtraaEdge</span>
           </h2>
           <p>
-            A <strong>MERN Stack CRM Solution</strong> for Educational
-            Institutes & Call Centers
+            A <strong>MERN Stack CRM Solution</strong> for Educational Institutes
+            & Call Centers
           </p>
 
           <div className="hero-buttons">
@@ -96,22 +102,22 @@ const LandingPage = () => {
           </div>
         </div>
 
+        {/* ===== HERO IMAGE WITH REAL DASHBOARD IMAGE ===== */}
         <div className="hero-image">
           <div className="mock-dashboard">
             <div className="mock-sidebar"></div>
+
             <div className="mock-content">
-              <div className="mock-bars">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div className="mock-circle"></div>
+              <img
+                src={tableImg}
+                alt="CRM Dashboard Preview"
+                className="dashboard-image"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      
       {/* ================= FOOTER ================= */}
       <footer className="footer">
         <div className="footer-top">
