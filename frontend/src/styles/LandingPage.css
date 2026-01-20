@@ -107,7 +107,7 @@ body {
   padding: 80px 6% 40px;
   background: linear-gradient(180deg, #ffffff, #eef4ff);
   gap: 60px;
-  margin-top: 250px;
+  margin-top: 800px;
 }
 
 /* ================= HERO CONTENT ================= */
@@ -239,5 +239,72 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 16px;
+  }
+}
+/* ================= KEY FEATURES ================= */
+.features {
+  padding: 80px 6%;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.features-title {
+  font-size: 2.4rem;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.features-subtitle {
+  color: var(--text-light);
+  margin-bottom: 50px;
+  font-size: 1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  background: white;
+  padding: 28px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+}
+
+.feature-card h4 {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* ================= RESPONSIVE FEATURES ================= */
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .features-grid {
+    grid-template-columns: 1fr;
   }
 }

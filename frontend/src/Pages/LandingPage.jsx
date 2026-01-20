@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/LandingPage.css";
 import logo from "../assets/logo.png";
 import tableImg from "../assets/table.png";
@@ -14,20 +14,18 @@ const LandingPage = () => {
   const handleNavClick = (item) => {
     setActiveNav(item);
 
-    // 👉 If Contact → go to contact page
     if (item === "Contact") {
       navigate("/contact");
       return;
     }
 
-    // 👉 Otherwise scroll
     const section = document.getElementById(item.toLowerCase());
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  // Highlight nav on scroll (excluding Contact)
+  // Highlight nav on scroll
   useEffect(() => {
     const handleScroll = () => {
       let current = "Home";
@@ -115,7 +113,6 @@ const LandingPage = () => {
           </div>
         </div>
 
-        {/* ================= HERO IMAGE ================= */}
         <div className="hero-image">
           <div className="mock-dashboard">
             <div className="mock-sidebar"></div>
@@ -126,6 +123,40 @@ const LandingPage = () => {
                 className="dashboard-image"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= KEY FEATURES ================= */}
+      <section id="features" className="features">
+        <h2 className="features-title">Key Features</h2>
+        <p className="features-subtitle">
+          Powerful tools to streamline your lead management process
+        </p>
+
+        <div className="features-grid">
+          <div className="feature-card">
+            <i className="fa-solid fa-chart-area feature-icon"></i>
+            <h4>Lead Dashboard & Reports</h4>
+            <p>Track and analyse lead data</p>
+          </div>
+
+          <div className="feature-card">
+            <i className="fa-solid fa-file-excel feature-icon"></i>
+            <h4>Excel Lead Upload</h4>
+            <p>Import leads from Excel sheets</p>
+          </div>
+
+          <div className="feature-card">
+            <i className="fa-solid fa-user-shield feature-icon"></i>
+            <h4>Role-Based Access</h4>
+            <p>Secure access for Admins, Managers, and Telecallers</p>
+          </div>
+
+          <div className="feature-card">
+            <i className="fa-solid fa-phone-volume feature-icon"></i>
+            <h4>Call Activity Tracking</h4>
+            <p>Log calls, follow-ups, and conversations</p>
           </div>
         </div>
       </section>
@@ -159,9 +190,7 @@ const LandingPage = () => {
 
           <div className="footer-col">
             <h4>Follow Us</h4>
-            <p className="social-text">
-              Facebook · Twitter · LinkedIn · Instagram
-            </p>
+            <p>Facebook · Twitter · LinkedIn · Instagram</p>
           </div>
         </div>
 
