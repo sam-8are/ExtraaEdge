@@ -230,31 +230,35 @@
   margin-top: 10px;
 }
 
-/* ================= FOOTER ================= */
+/* ================= FOOTER (UPDATED & COMPACT) ================= */
 .footer {
-  background: #1e3a8a url("https://www.transparenttextures.com/patterns/black-linen.png");
+  background: #1e3a8a
+    url("https://www.transparenttextures.com/patterns/black-linen.png");
   color: white;
-  padding: 60px 8% 20px;
+  padding: 30px 8% 15px; /* ⬅ reduced height */
+  font-size: 14px;
 }
 
 .footer-top {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 25px;
 }
 
 .footer-col h4 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .footer-col ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-col li {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .footer-link {
@@ -264,6 +268,8 @@
   cursor: pointer;
   opacity: 0.8;
   transition: 0.3s;
+  font-size: 14px;
+  padding: 0;
 }
 
 .footer-link:hover,
@@ -275,14 +281,16 @@
 .footer-col p,
 .social-text {
   opacity: 0.8;
+  margin: 4px 0;
+  font-size: 14px;
 }
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin-top: 40px;
-  padding-top: 20px;
+  margin-top: 20px;
+  padding-top: 10px;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   opacity: 0.7;
 }
 
