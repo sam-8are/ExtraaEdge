@@ -83,7 +83,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./Pages/Homepage/LandingPage";
 import Login from "./Pages/Login";
 import RegisterPage from "./Pages/Registration";
-import Contact from "./Pages/Homepage/Contact"; // ✅ ADD THIS
+import Contact from "./Pages/Homepage/Contact"; 
 
 // Dashboards
 import AdminDashboard from "./Pages/AdminDashboard";
