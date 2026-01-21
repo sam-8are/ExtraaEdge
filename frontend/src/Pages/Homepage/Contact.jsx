@@ -6,7 +6,7 @@ import logo from "../../assets/logo.png";
 const Contact = () => {
   const navigate = useNavigate();
 
-  const navItems = ["Home", "Features", "Roles", "Tech Stack", "Contact"];
+  const navItems = ["Home", "Features", "Contact"];
   const [activeNav, setActiveNav] = useState("Contact");
 
   const handleNavClick = (item) => {

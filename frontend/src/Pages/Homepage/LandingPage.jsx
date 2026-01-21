@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./LandingPage.css"; // ✅ FIXED
-import logo from "../../assets/logo.png"; // ✅ FIXED
-import tableImg from "../../assets/table.png"; // ✅ FIXED
+import "./LandingPage.css";
+import logo from "../../assets/logo.png";
+import tableImg from "../../assets/table.png";
 
 const LandingPage = () => {
   const [activeNav, setActiveNav] = useState("Home");
   const navigate = useNavigate();
 
-  const navItems = ["Home", "Features", "Roles", "Tech Stack", "Contact"];
+  const navItems = ["Home", "Features", "Contact"];
 
   // Handle nav click
   const handleNavClick = (item) => {
@@ -170,9 +170,8 @@ const LandingPage = () => {
               {navItems.map((item) => (
                 <li key={item}>
                   <button
-                    className={`footer-link ${
-                      activeNav === item ? "active" : ""
-                    }`}
+                    className={`footer-link ${activeNav === item ? "active" : ""
+                      }`}
                     onClick={() => handleNavClick(item)}
                   >
                     {item}
@@ -184,8 +183,10 @@ const LandingPage = () => {
 
           <div className="footer-col">
             <h4>Contact Us</h4>
-            <p>info@extraaedge.com</p>
-            <p>+1 234 567 850</p>
+            <a href="">Piyushi Agrawal</a><br />
+            <a href="mailto:rashmi@extraaedge.com">Rashmi Patil</a><br />
+            <a href="mailto:samruddhi@extraaedge.com">Samruddhi Athare</a><br />
+            <a href="mailto:manjushree@extraaedge.com">Manjushree Gade</a><br />
           </div>
 
           <div className="footer-col">

@@ -38,7 +38,7 @@ body {
 .contact-tag {
   font-size: 12px;
   letter-spacing: 3px;
-  color: #0bad67;
+  color: black;
   font-weight: 600;
 }
 
@@ -91,7 +91,7 @@ body {
   font-size: 14px;
   background:
     linear-gradient(#ffffff, #ffffff) padding-box,
-    linear-gradient(90deg, #0f766e) border-box;
+    linear-gradient(90deg, black) border-box;
   border: 1.5px solid transparent;
   outline: none;
   transition: 0.3s ease;

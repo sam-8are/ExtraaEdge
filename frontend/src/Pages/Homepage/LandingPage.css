@@ -186,7 +186,12 @@ body {
   font-size: 14px;
   margin-bottom: 6px;
 }
-
+.footer-col a {
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  opacity: 0.75;
+}
 .footer-col ul {
   list-style: none;
   padding: 0;

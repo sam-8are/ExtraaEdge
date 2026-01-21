@@ -20,7 +20,7 @@ body {
   display: flex;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+
 }
 
 /* Left */
@@ -61,7 +61,7 @@ body {
   padding: 12px;
   border: none;
   border-radius: 30px;
-  background: linear-gradient(90deg, #f9731a, #00bcd4);
+  background: linear-gradient(90deg, #f9731a, #f9731a);
   color: #022b30;
   font-weight: bold;
   cursor: pointer;
@@ -84,7 +84,7 @@ body {
 /* Right */
 .auth-right {
   width: 55%;
-  background: linear-gradient(135deg, #f9731a, #1812ce);
+  background: linear-gradient(135deg, #f9731a, #f9731a);
   clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
   display: flex;
   align-items: center;
