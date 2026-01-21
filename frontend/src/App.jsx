@@ -1,3 +1,8 @@
+
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
 // // // // import { BrowserRouter, Routes, Route } from "react-router-dom";
 // // // // import Login from "./Pages/Login";
 // // // // import Register from "./Pages/Registration";
@@ -80,7 +85,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Public Pages
-import LandingPage from "./Pages/Homepage/LandingPage";
+import LandingPage from "./Pages/LandingPage";
 import Login from "./Pages/Login";
 import RegisterPage from "./Pages/Registration";
 import Contact from "./Pages/Homepage/Contact"; 
@@ -89,6 +94,8 @@ import Contact from "./Pages/Homepage/Contact";
 import AdminDashboard from "./Pages/AdminDashboard";
 import ManagerDashboard from "./Pages/ManagerDashboard";
 import TelecallerDashboard from "./Pages/TelecallerDashboard";
+
+import ContactUs from "./components/ContactUs";  // Import ContactUs component
 
 function App() {
   return (
@@ -104,6 +111,8 @@ function App() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/manager" element={<ManagerDashboard />} />
         <Route path="/telecaller" element={<TelecallerDashboard />} />
+
+        <Route path="/contact" element={<ContactUs />} />  {/* Added ContactUs route */}
       </Routes>
     </BrowserRouter>
   );
