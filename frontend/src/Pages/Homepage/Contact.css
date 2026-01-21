@@ -1,22 +1,36 @@
-/* ===== CONTACT PAGE ===== */
-.contact-page {
-  width: 100vw;
-  min-height: 100vh;
-  background: #f8fafc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 6%;
+/* ================= GLOBAL RESET ================= */
+* {
+  box-sizing: border-box;
 }
 
-/* ===== WRAPPER ===== */
-.contact-wrapper {
+html,
+body {
   width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #f8fafc;
+}
+
+/* ================= CONTACT PAGE ================= */
+.contact-page {
+  width: 100vw;                 /* FULL SCREEN WIDTH */
+  min-height: 100vh;            /* FULL SCREEN HEIGHT */
+  background: #f8fafc;
+  display: flex;
+  justify-content: center;
+  padding: 120px 6% 80px;       /* space for header */
+}
+
+/* ================= WRAPPER ================= */
+.contact-wrapper {
+  width: 100%;                  /* REMOVE max-width LIMIT */
   display: flex;
   gap: 80px;
 }
 
-/* ===== LEFT SECTION ===== */
+/* ================= LEFT SECTION ================= */
 .contact-left {
   flex: 1;
 }
@@ -40,18 +54,21 @@
   font-size: 16px;
   color: #4b5563;
   max-width: 420px;
+  line-height: 1.6;
 }
 
-/* ===== RIGHT SECTION ===== */
+/* ================= RIGHT SECTION ================= */
 .contact-right {
   flex: 1;
 }
 
+/* ================= FORM ROW ================= */
 .row {
   display: flex;
   gap: 20px;
 }
 
+/* ================= FORM FIELD ================= */
 .field {
   display: flex;
   flex-direction: column;
@@ -65,7 +82,7 @@
   font-weight: 600;
 }
 
-/* ===== INPUTS WITH BLUE → BROWN OUTLINE ===== */
+/* ================= INPUTS ================= */
 .field input,
 .field textarea {
   width: 100%;
@@ -74,20 +91,25 @@
   font-size: 14px;
   background:
     linear-gradient(#ffffff, #ffffff) padding-box,
-    linear-gradient(90deg,  #0f766e) border-box;
+    linear-gradient(90deg, #0f766e) border-box;
   border: 1.5px solid transparent;
   outline: none;
+  transition: 0.3s ease;
 }
 
-/* ===== FOCUS EFFECT ===== */
 .field input:focus,
 .field textarea:focus {
   background:
     linear-gradient(#ffffff, #ffffff) padding-box,
-    linear-gradient(90deg,  #92400e) border-box;
+    linear-gradient(90deg, #92400e) border-box;
 }
 
-/* ===== CHECKBOX ===== */
+.field textarea {
+  resize: none;
+  min-height: 140px;
+}
+
+/* ================= CHECKBOX ================= */
 .checkbox {
   display: flex;
   align-items: center;
@@ -96,12 +118,21 @@
   margin: 18px 0 30px;
 }
 
+.checkbox input {
+  accent-color: #f97316;
+}
+
 .checkbox a {
   color: #d59525;
   font-weight: 500;
+  text-decoration: none;
 }
 
-/* ===== BUTTON ===== */
+.checkbox a:hover {
+  text-decoration: underline;
+}
+
+/* ================= BUTTON ================= */
 button {
   background: #f97316;
   color: #ffffff;
@@ -109,14 +140,17 @@ button {
   border-radius: 14px;
   font-size: 15px;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
   transition: 0.3s ease;
 }
 
 button:hover {
   background: #ea580c;
+  transform: translateY(-1px);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
   .contact-wrapper {
     flex-direction: column;
@@ -125,5 +159,19 @@ button:hover {
 
   .contact-left h1 {
     font-size: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .contact-left h1 {
+    font-size: 38px;
+  }
+
+  .contact-page {
+    padding: 110px 5% 60px;
   }
 }
