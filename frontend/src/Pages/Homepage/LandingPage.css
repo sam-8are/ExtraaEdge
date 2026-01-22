@@ -190,6 +190,7 @@ body {
   color: white;
   font-size: 13px;
   text-decoration: none;
+  /* opacity: 0.75; */
 }
 .footer-col ul {
   list-style: none;
